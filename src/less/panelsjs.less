@@ -1,0 +1,66 @@
+/* PanelsJS Styles */
+
+@import "reset";
+@import "mixins";
+
+.window {
+	position:absolute;
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	.box-sizing();
+}
+[data-role='panel'] {
+	-webkit-transform: translate3d(0, 0, 0); // activate the GPU
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display:none;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling:touch;
+	.box-shadow(0 0 10px #000);
+	.box-sizing();
+}
+
+[data-scrolling='false'] {
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+[data-fade] {
+	opacity:0;
+	.box-shadow(none);
+}
+[data-scale] {
+	.box-shadow(none);
+}
+
+.open {
+	display:block;
+}
+
+#panelA {
+	background-color:lightblue;
+}
+#panelB {
+	background-color:lightgreen;
+}
+#panelC {
+	background-color:lightcoral;
+}
+#panelD {
+	background-color:lightgoldenrodyellow;
+}
+#panelE {
+	background-color:lightsalmon;
+}
+#panelF {
+	background-color:lightsteelblue;
+}
+#panelG {
+	background-color:lightgray;
+}
