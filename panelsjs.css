@@ -173,7 +173,7 @@ textarea {
   [data-role='panel'] {
     -webkit-transform: translate3d(0, 0, 0);
   }
-}
-.android .window [data-role='panel'] {
-  -webkit-transform: none !important;
+  .android .window [data-role='panel'] {
+    -webkit-transform: none !important;
+  }
 }

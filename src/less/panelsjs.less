@@ -68,8 +68,9 @@
 	[data-role='panel'] {
 		-webkit-transform: translate3d(0, 0, 0); // activate the GPU
 	}
+
+	.android .window [data-role='panel'] {
+		-webkit-transform: none !important; // activate the GPU
+	}
 }
 
-.android .window [data-role='panel'] {
-	-webkit-transform: none !important; // activate the GPU
-}
