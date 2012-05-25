@@ -11,12 +11,9 @@
 
 		self.win = $('.window');
 
-		self.panels.each(function () {
-			var $panel = $(this);
-			if ($panel.data('scale')) {
-				$panel.css({'-webkit-transform':'scale(0)'});
-			}
-		});
+		if (/Anroid/.test(navigator.userAgent)) {
+			$('html').addClass('android');
+		}
 
 		self.position = function ($panel) {
 			var pos = $panel.data('pos');
@@ -43,8 +40,6 @@
 			}
 			return this;
 		};
-
-
 
 		self.show = function (panelId) {
 			var $panel = $(panelId),
@@ -135,7 +130,11 @@
 		};
 
 		self.panels.each(function (i,node) {
-			self.position($(this));
+			var $panel = $(this);
+			if ($panel.data('scale')) {
+				$panel.css({'-webkit-transform':'scale(0)'});
+			}
+			self.position($panel);
 		});
 
 		return this;

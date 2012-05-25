@@ -66,6 +66,10 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
 	[data-role='panel'] {
-		//-webkit-transform: translate3d(0, 0, 0); // activate the GPU
+		-webkit-transform: translate3d(0, 0, 0); // activate the GPU
 	}
+}
+
+.android [data-role='panel'] {
+	-webkit-transform: none !important; // activate the GPU
 }
