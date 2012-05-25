@@ -12,7 +12,7 @@
 		self.win = $('.window');
 
 		if (/Anroid/.test(navigator.userAgent)) {
-			$('html').addClass('android');
+			$('body').addClass('android');
 		}
 
 		self.position = function ($panel) {
