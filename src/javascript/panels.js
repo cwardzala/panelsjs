@@ -127,7 +127,9 @@
 
 			prop[direction] = (parseInt($panel.css(direction),10) == ammount) ? 0 : ammount;
 
-			$panel.animate(prop, 200, 'linear');
+			$panel.animate(prop, 200, 'linear', function () {
+				$panel.toggleClass('shifted');
+			});
 			
 			return this;
 		};
