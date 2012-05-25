@@ -10,8 +10,8 @@
 		var topZindex = self.panels.length+1;
 
 		self.win = $('.window');
-
-		if (/Anroid/.test(navigator.userAgent)) {
+		console.log(navigator.userAgent);
+		if (/Android/.test(navigator.userAgent)) {
 			$('body').addClass('android');
 		}
 
